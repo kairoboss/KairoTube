@@ -6,13 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.activities.tryconnection.TryConnectionActivity">
 
-
-    <androidx.appcompat.widget.Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-
     <ImageView
         android:id="@+id/iv_no_inet"
         android:layout_width="227dp"

@@ -2,7 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.kairat.kairotube">
 
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
+        android:name=".App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -10,9 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KairoTube">
         <activity android:name=".ui.activities.play.PlayActivity"></activity>
-        <activity android:name=".ui.activities.playlist.PlaylistActivity" />
-        <activity android:name=".ui.activities.tryconnection.TryConnectionActivity" />
-        <activity android:name=".ui.activities.main.MainActivity">
+        <activity android:name=".ui.activities.videos.VideosActivity" />
+        <activity android:name=".ui.activities.tryconnection.TryConnectionActivity"/>
+        <activity android:name=".ui.activities.playlists.PlaylistsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

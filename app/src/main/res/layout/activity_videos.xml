@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activities.playlist.PlaylistActivity">
+    tools:context=".ui.activities.videos.VideosActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/playlist_toolbar"
@@ -57,7 +57,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
             android:layout_marginTop="24dp"
-            android:fontFamily="sans-serif-condensed-medium"
+            android:fontFamily="@font/fjalla_one"
             android:lineHeight="30dp"
             android:text="Emotional Well-being and Healing Practices for Children"
             android:textColor="@color/black"
