@@ -9,12 +9,12 @@ import android.os.Build
 import android.widget.ImageView
 import com.bumptech.glide.Glide
 
-fun ImageView.setImageFromUrl(url:String?, iv : ImageView){
-    Glide.with(iv).load(url).into(iv)
+fun ImageView.setImageFromUrl(url:String?){
+    Glide.with(this).load(url).into(this)
 }
-fun Context.isConnected(context:Context) : Boolean{
+fun Context.isConnected() : Boolean{
     val connectivityManager =
-        context.getSystemService(CONNECTIVITY_SERVICE) as ConnectivityManager
+        this.getSystemService(CONNECTIVITY_SERVICE) as ConnectivityManager
     if (connectivityManager != null) {
         val capabilities =
             connectivityManager.getNetworkCapabilities(connectivityManager.activeNetwork)

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activities.tryconnection.TryConnectionActivity">
+    tools:context=".ui.activities.tryconnection.CheckConnectionActivity">
 
     <ImageView
         android:id="@+id/iv_no_inet"
@@ -41,6 +41,4 @@
         android:textSize="20sp"
         android:padding="10dp"
         android:backgroundTint="@color/red"/>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

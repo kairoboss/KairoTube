@@ -13,6 +13,7 @@ import retrofit2.Response
 class Repository {
 
     var playlistsLiveData : MutableLiveData<MutableList<VideoInfo.Info>> = MutableLiveData()
+    var videosLiveData : MutableLiveData<MutableList<VideoInfo.Info>> = MutableLiveData()
 
 
     fun loadPlaylists():MutableLiveData<MutableList<VideoInfo.Info>>{
@@ -30,5 +31,19 @@ class Repository {
             }
         })
         return playlistsLiveData
+    }
+
+    fun loadVideos(id:String):MutableLiveData<MutableList<VideoInfo.Info>>{
+        ApiClient.getInstance().getVideos(PART, "", id, API_KEY).enqueue(object: retrofit2.Callback<VideoInfo>{
+            override fun onResponse(call: Call<VideoInfo>, response: Response<VideoInfo>) {
+                val data = response.body()
+                val list = data!!.items
+                videosLiveData.value = list
+            }
+
+            override fun onFailure(call: Call<VideoInfo>, t: Throwable) {
+            }
+        })
+        return videosLiveData
     }
 }

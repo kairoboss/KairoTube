@@ -4,7 +4,8 @@
 
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".App"
         android:allowBackup="true"
@@ -13,9 +14,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KairoTube">
-        <activity android:name=".ui.activities.play.PlayActivity"></activity>
-        <activity android:name=".ui.activities.videos.VideosActivity" />
-        <activity android:name=".ui.activities.tryconnection.TryConnectionActivity"/>
+        <activity
+            android:name=".ui.activities.videos.VideosActivity"
+            android:label="@string/title_activity_scrolling"
+            android:theme="@style/Theme.KairoTube.NoActionBar"></activity>
+        <activity android:name=".ui.activities.tryconnection.CheckConnectionActivity" />
+        <activity android:name=".ui.activities.play.PlayActivity" />
         <activity android:name=".ui.activities.playlists.PlaylistsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

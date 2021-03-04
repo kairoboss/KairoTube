@@ -9,7 +9,9 @@ import com.kairat.kairotube.data.model.VideoInfo
 class PlaylistsViewModel : ViewModel() {
 
     var playlists = MutableLiveData<MutableList<VideoInfo.Info>>()
+
     fun setPlaylists(){
         playlists = App.repository.loadPlaylists()
     }
+
 }
