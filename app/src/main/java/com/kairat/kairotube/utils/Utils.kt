@@ -7,6 +7,8 @@ import android.net.NetworkCapabilities
 import android.net.NetworkInfo
 import android.os.Build
 import android.widget.ImageView
+import android.widget.Toast
+import android.widget.Toast.LENGTH_LONG
 import com.bumptech.glide.Glide
 
 fun ImageView.setImageFromUrl(url:String?){
@@ -29,4 +31,8 @@ fun Context.isConnected() : Boolean{
         }
     }
     return false
+}
+
+fun Context.showToast(text:String){
+    Toast.makeText(this, text, LENGTH_LONG).show()
 }
